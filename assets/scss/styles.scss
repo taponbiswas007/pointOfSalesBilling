@@ -1,0 +1,42 @@
+.point_of_sales_bill_wrapper {
+    .p_header {
+        background: #011C50;
+
+
+        h1 {
+            font-family: Inter;
+            font-weight: 700;
+            font-size: 17.6px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #ffffff;
+            margin-bottom: 0;
+
+
+        }
+        button{
+            border: 1px solid #ffffff;
+            font-family: Inter;
+            font-weight: 700;
+            font-size: 17.6px;
+            padding: 5px 15px;
+            border-radius: 7px;
+            background: none;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            &:hover{
+                background: #ffffff;
+                color:#011C50 ;
+            }
+        }
+        input{
+            background: #ffffff;
+            border: none;
+            border-radius: 7px;
+            padding: 5px 10px;
+            font-family: Inter;
+            font-weight: 500;
+            font-size: 17.6px;
+        }
+    }
+}
