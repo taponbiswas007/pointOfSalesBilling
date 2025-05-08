@@ -1,3 +1,7 @@
+body {
+  background: #F4F3F6;
+}
+
 .point_of_sales_bill_wrapper .p_header {
   background: #011C50;
 }
@@ -33,4 +37,103 @@
   font-family: Inter;
   font-weight: 500;
   font-size: 17.6px;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .item_list {
+  background: #384785;
+  border-radius: 10px;
+  padding: 15px;
+  width: 135px;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .item_list ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .item_list ul li {
+  width: 100%;
+  margin-bottom: 9px;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .item_list ul li:last-child {
+  margin-bottom: 0;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .item_list ul li button {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -1%;
+  text-align: center;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.7803921569);
+  border-radius: 9px;
+  min-height: 57px;
+  background: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .item_list ul li button:hover {
+  background: #ffffff;
+  color: #011C50;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 15px;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card {
+  box-shadow: 0px 5.24px 18.88px 0px rgba(0, 0, 0, 0.0588235294);
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  width: calc((100% - 30px) / 3);
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card:hover {
+  border: 2px solid #011C50;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card .items_card_description {
+  padding: 12px;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card .items_card_description p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12.59px;
+  line-height: 18.88px;
+  letter-spacing: -1%;
+  color: #000000;
+  margin-bottom: 0;
+  text-align: left;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card .items_card_footer {
+  padding: 8px 12px;
+  border-top: 0.52px solid #E5E5EA;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 12.59px;
+  line-height: 18.88px;
+  letter-spacing: -1%;
+  color: #000000;
+  text-align: left;
+}
+
+@media (max-width: 630px) {
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card {
+    width: calc((100% - 15px) / 2);
+  }
+}
+@media (max-width: 440px) {
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */
