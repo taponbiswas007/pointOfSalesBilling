@@ -1,6 +1,7 @@
-body{
+body {
     background: #F4F3F6;
 }
+
 .point_of_sales_bill_wrapper {
     .p_header {
         background: #011C50;
@@ -85,7 +86,8 @@ body{
                         background: none;
                         width: 100%;
                         transition: all 0.3s ease;
-                        &:hover{
+
+                        &:hover {
                             background: #ffffff;
                             color: #011C50;
                         }
@@ -109,10 +111,13 @@ body{
                 border: 2px solid #ffffff;
                 border-radius: 5px;
                 transition: all 0.3s ease;
-            &:hover{
-                border: 2px solid #011C50;
-            }
+
+                &:hover {
+                    border: 2px solid #011C50;
+                }
+
                 width: calc((100% - 30px) / 3);
+
                 .items_card_description {
                     padding: 12px;
 
@@ -142,15 +147,48 @@ body{
                 }
             }
         }
+
+        .bill_area {
+            .bill_header {
+                background: #384785;
+                padding: 7px 13px 7px 20px;
+                border-radius: 3px;
+
+                .barcodeinput_area {
+                    input {
+                        padding: 5px 7px 5px 30px;
+                        background: #ffffff;
+                        border-radius: 7px;
+                        border: none;
+                    }
+                }
+
+                .customerbtn {
+                    font-family: Rubik;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22.3px;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    vertical-align: bottom;
+                    padding: 5px 20px;
+                    background: #ffffff;
+                    border-radius: 5px;
+                    border: none;
+                }
+            }
+        }
     }
 }
+
 @media (max-width: 630px) {
-    .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card{
+    .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card {
         width: calc((100% - 15px) / 2);
     }
 }
+
 @media (max-width: 440px) {
-    .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card{
+    .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card {
         width: 100%;
     }
 }
