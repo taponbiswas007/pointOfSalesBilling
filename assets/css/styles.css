@@ -331,7 +331,7 @@ body {
   color: #000000;
   background: #E5E5EA;
   border: 1px solid #E5E5EA;
-  padding: 7px 10px;
+  padding: 7px 8px;
   height: 44px;
   border-radius: 5px;
   transition: all 0.3s ease;
@@ -450,9 +450,69 @@ body {
     width: calc(50% + 100px);
   }
 }
+@media (max-width: 1080px) {
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area {
+    flex-direction: column;
+  }
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems {
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area {
+    width: 100%;
+  }
+}
 @media (max-width: 630px) {
-  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card {
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems .items_card {
     width: calc((100% - 15px) / 2);
+  }
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_save_and_print_area ul {
+    flex-wrap: wrap;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    row-gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area,
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_save_and_print_area,
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_total_amount_area,
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_titel_area,
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .billing_items li {
+    padding: 12px 10px;
+  }
+}
+@media (max-width: 540px) {
+  .point_of_sales_bill_wrapper .billing_body_wrapper {
+    flex-direction: column;
+  }
+  .point_of_sales_bill_wrapper .billing_body_wrapper .item_list {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .point_of_sales_bill_wrapper .billing_body_wrapper .item_list ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .point_of_sales_bill_wrapper .billing_body_wrapper .item_list ul li {
+    width: -moz-fit-content;
+    width: fit-content;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+  .point_of_sales_bill_wrapper .billing_body_wrapper .item_list ul li button {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px;
+  }
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems {
+    padding-top: 15px;
   }
 }
 @media (max-width: 440px) {
