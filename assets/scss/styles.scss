@@ -104,6 +104,7 @@ body {
             row-gap: 15px;
             flex-wrap: wrap;
             padding: 0 15px;
+            width: 45%;
 
             .items_card {
                 box-shadow: 0px 5.24px 18.88px 0px #0000000F;
@@ -149,6 +150,8 @@ body {
         }
 
         .bill_area {
+            width: 50%;
+
             .bill_header {
                 background: #384785;
                 padding: 7px 13px 7px 20px;
@@ -175,6 +178,205 @@ body {
                     background: #ffffff;
                     border-radius: 5px;
                     border: none;
+                }
+            }
+
+            .bill_body {
+                background: #ffffff;
+                box-shadow: -1px 3px 18px 0px #00000003;
+                border: 1px solid #FFF4F4;
+                border-radius: 4px;
+                margin-top: 11px;
+
+                .bill_titel_area {
+                    box-shadow: 0px 2.43px 4.87px -1.22px #0000001C;
+                    background: #FFFFFF;
+                    border-radius: 5px;
+                    padding: 12px 30px;
+
+                    .b_left {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        column-gap: 60px;
+
+                        h1 {
+                            font-family: Poppins;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 20.12px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                            vertical-align: bottom;
+                            color: #000000;
+                            margin-bottom: 0;
+                            min-width: 60px;
+                        }
+
+                        h2 {
+                            font-family: Poppins;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 20.12px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                            vertical-align: bottom;
+                            color: #000000;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .b_right {
+                        h1 {
+                            font-family: Poppins;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 20.12px;
+                            letter-spacing: 0%;
+                            text-align: right;
+                            vertical-align: bottom;
+                            color: #000000;
+                            margin-bottom: 0;
+                        }
+                    }
+
+
+                }
+
+                .billing_items {
+                    list-style-type: none;
+                    padding-left: 0;
+                    margin-bottom: 0;
+                    height: 429px;
+                    overflow-y: auto;
+
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 12px 30px;
+                        border-bottom: 1px solid #E5E5EA;
+
+                        .b_left {
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            column-gap: 60px;
+
+
+                            h2 {
+                                font-family: Poppins;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 18.88px;
+                                letter-spacing: -1%;
+                                color: #000000;
+                                margin-bottom: 0;
+                                text-align: left;
+                                min-width: 60px;
+                            }
+
+                            h3 {
+                                font-family: Poppins;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 18.88px;
+                                letter-spacing: -1%;
+                                color: #000000;
+                                margin-bottom: 0;
+                                text-align: left;
+                            }
+                        }
+
+                        .b_right {
+
+
+                            h2 {
+                                font-family: Poppins;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 18.88px;
+                                letter-spacing: -1%;
+                                color: #000000;
+                                margin-bottom: 0;
+                                text-align: right;
+                            }
+
+                            h3 {
+                                font-family: Inter;
+                                font-weight: 400;
+                                font-size: 12px;
+                                line-height: 18.88px;
+                                letter-spacing: -1%;
+                                text-align: right;
+
+                                color: #000000;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                .bill_total_amount_area {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 12px 30px;
+                    border-bottom: 1px solid #E5E5EA;
+
+                    ul {
+                        list-style-type: none;
+                        padding-left: 0;
+                        margin-bottom: 0;
+
+                        li {
+                            &:first-child {
+                                font-family: Poppins;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 23.9px;
+                                letter-spacing: -1%;
+                                color: #8E8E93;
+                            }
+
+                            &:last-child {
+                                font-family: Poppins;
+                                font-weight: 500;
+                                font-size: 20px;
+                                line-height: 23.9px;
+                                letter-spacing: -1%;
+                                color: #000000;
+                            }
+                        }
+
+                        &:last-child {
+                            li {
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+
+                .bill_save_and_print_area {
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding-left: 0;
+                        margin-bottom: 0;
+
+                        li {
+                            button {
+                                font-family: Poppins;
+                                font-weight: 400;
+                                font-size: 18px;
+                                line-height: 20.12px;
+                                letter-spacing: 0%;
+                                vertical-align: bottom;
+                                color: #000000;
+                            }
+                        }
+                    }
                 }
             }
         }
