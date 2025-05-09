@@ -104,7 +104,7 @@ body {
   border: 2px solid #011C50;
 }
 .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card .items_card_description {
-  padding: 12px;
+  padding: 16px 12px 17px 12px;
 }
 .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card .items_card_description p {
   font-family: Inter;
@@ -379,6 +379,25 @@ body {
 .point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr .bk_color {
   background: #FAA0A0;
   border: 1px solid #F77070;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .paymentBtn {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20.12px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  color: #ffffff;
+  background: #384785;
+  padding: 21px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  margin-top: 17px;
+  transition: all 0.3s ease;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .paymentBtn:hover {
+  background: #0f1d55;
 }
 
 @media (max-width: 630px) {
