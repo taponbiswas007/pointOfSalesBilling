@@ -301,12 +301,16 @@ body {
 .point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_total_amount_area ul:last-child li {
   text-align: right;
 }
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_save_and_print_area {
+  padding: 12px 30px;
+}
 .point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_save_and_print_area ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 0;
   margin-bottom: 0;
+  list-style-type: none;
 }
 .point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_save_and_print_area ul li button {
   font-family: Poppins;
@@ -316,6 +320,65 @@ body {
   letter-spacing: 0%;
   vertical-align: bottom;
   color: #000000;
+  background: #E5E5EA;
+  border: 1px solid #E5E5EA;
+  padding: 7px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_save_and_print_area ul li button:hover {
+  border: 1px solid #011C50;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area {
+  padding: 12px 30px;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container {
+  background: #F4F4F4;
+  border-radius: 12px;
+  border: 1px solid #E5E5E5;
+  overflow: hidden;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr:first-child {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td {
+  width: 25%;
+  border: 0.5px solid #E5E5E5;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td button {
+  width: 100%;
+  height: 100%;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20.12px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  color: #000000;
+  padding: 16px 0;
+  border: none;
+  background: transparent;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr .qty_color {
+  background: #DEFDFF;
+  border: 1px solid #017E84;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr .yellow_color {
+  background: #F7E08E;
+  border: 1px solid #F8C100;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr .dot_color {
+  background: #F5D7CB;
+  border: 1px solid #ECB7A0;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr .bk_color {
+  background: #FAA0A0;
+  border: 1px solid #F77070;
 }
 
 @media (max-width: 630px) {
