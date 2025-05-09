@@ -83,6 +83,10 @@ body {
   background: #ffffff;
   color: #011C50;
 }
+.point_of_sales_bill_wrapper .billing_body_wrapper .item_list ul li .active {
+  background: #ffffff;
+  color: #011C50;
+}
 .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area {
   display: flex;
   justify-content: space-between;
@@ -145,7 +149,7 @@ body {
   border-radius: 3px;
 }
 .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_header .barcodeinput_area input {
-  padding: 5px 7px 5px 30px;
+  padding: 5px 7px 5px 40px;
   background: #ffffff;
   border-radius: 7px;
   border: none;
@@ -160,6 +164,7 @@ body {
   vertical-align: bottom;
   padding: 5px 20px;
   background: #ffffff;
+  color: #002A97;
   border-radius: 5px;
   border: none;
 }
