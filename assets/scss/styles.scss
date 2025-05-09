@@ -52,6 +52,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: start;
+        column-gap: 15px;
 
         .item_list {
             background: #384785;
@@ -96,166 +97,110 @@ body {
             }
         }
 
-        .subitems {
+        .subitems_and_bill_area {
             display: flex;
             justify-content: space-between;
-            align-items: stretch;
-            column-gap: 15px;
-            row-gap: 15px;
-            flex-wrap: wrap;
-            padding: 0 15px;
-            width: 45%;
+            align-items: start;
+           column-gap: 15px;
+           row-gap: 15px;
 
-            .items_card {
-                box-shadow: 0px 5.24px 18.88px 0px #0000000F;
-                background: #ffffff;
-                border: 2px solid #ffffff;
-                border-radius: 5px;
-                transition: all 0.3s ease;
+            .subitems {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                column-gap: 15px;
+                row-gap: 15px;
+                flex-wrap: wrap;
+               
+                width: calc(50% - 100px);
 
-                &:hover {
-                    border: 2px solid #011C50;
-                }
+                .items_card {
+                    box-shadow: 0px 5.24px 18.88px 0px #0000000F;
+                    background: #ffffff;
+                    border: 2px solid #ffffff;
+                    border-radius: 5px;
+                    transition: all 0.3s ease;
 
-                width: calc((100% - 30px) / 3);
+                    &:hover {
+                        border: 2px solid #011C50;
+                    }
 
-                .items_card_description {
-                   padding: 16px 12px 17px 12px;
+                    width: calc((100% - 30px) / 3);
 
-                    p {
+                    .items_card_description {
+                        padding: 16px 12px 17px 12px;
+
+                        p {
+                            font-family: Inter;
+                            font-weight: 400;
+                            font-size: 12.59px;
+                            line-height: 18.88px;
+                            letter-spacing: -1%;
+                            color: #000000;
+                            margin-bottom: 0;
+                            text-align: left;
+
+                        }
+                    }
+
+                    .items_card_footer {
+                        padding: 8px 12px;
+                        border-top: 0.52px solid #E5E5EA;
                         font-family: Inter;
-                        font-weight: 400;
+                        font-weight: 600;
                         font-size: 12.59px;
                         line-height: 18.88px;
                         letter-spacing: -1%;
                         color: #000000;
-                        margin-bottom: 0;
                         text-align: left;
-
                     }
                 }
-
-                .items_card_footer {
-                    padding: 8px 12px;
-                    border-top: 0.52px solid #E5E5EA;
-                    font-family: Inter;
-                    font-weight: 600;
-                    font-size: 12.59px;
-                    line-height: 18.88px;
-                    letter-spacing: -1%;
-                    color: #000000;
-                    text-align: left;
-                }
             }
-        }
 
-        .bill_area {
-            width: 50%;
+            .bill_area {
+                  width: calc( 50%  + 100px);
 
-            .bill_header {
-                background: #384785;
-                padding: 7px 13px 7px 20px;
-                border-radius: 3px;
+                .bill_header {
+                    background: #384785;
+                    padding: 7px 13px 7px 20px;
+                    border-radius: 3px;
 
-                .barcodeinput_area {
-                    input {
-                        padding: 5px 7px 5px 30px;
+                    .barcodeinput_area {
+                        input {
+                            padding: 5px 7px 5px 30px;
+                            background: #ffffff;
+                            border-radius: 7px;
+                            border: none;
+                        }
+                    }
+
+                    .customerbtn {
+                        font-family: Rubik;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 22.3px;
+                        letter-spacing: 0%;
+                        text-align: center;
+                        vertical-align: bottom;
+                        padding: 5px 20px;
                         background: #ffffff;
-                        border-radius: 7px;
+                        border-radius: 5px;
                         border: none;
                     }
                 }
 
-                .customerbtn {
-                    font-family: Rubik;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 22.3px;
-                    letter-spacing: 0%;
-                    text-align: center;
-                    vertical-align: bottom;
-                    padding: 5px 20px;
+                .bill_body {
                     background: #ffffff;
-                    border-radius: 5px;
-                    border: none;
-                }
-            }
+                    box-shadow: -1px 3px 18px 0px #00000003;
+                    border: 1px solid #FFF4F4;
+                    border-radius: 4px;
+                    margin-top: 11px;
 
-            .bill_body {
-                background: #ffffff;
-                box-shadow: -1px 3px 18px 0px #00000003;
-                border: 1px solid #FFF4F4;
-                border-radius: 4px;
-                margin-top: 11px;
-
-                .bill_titel_area {
-                    box-shadow: 0px 2.43px 4.87px -1.22px #0000001C;
-                    background: #FFFFFF;
-                    border-radius: 5px;
-                    padding: 12px 30px;
-
-                    .b_left {
-                        display: flex;
-                        justify-content: start;
-                        align-items: center;
-                        column-gap: 60px;
-
-                        h1 {
-                            font-family: Poppins;
-                            font-weight: 500;
-                            font-size: 16px;
-                            line-height: 20.12px;
-                            letter-spacing: 0%;
-                            text-align: left;
-                            vertical-align: bottom;
-                            color: #000000;
-                            margin-bottom: 0;
-                            min-width: 60px;
-                        }
-
-                        h2 {
-                            font-family: Poppins;
-                            font-weight: 500;
-                            font-size: 16px;
-                            line-height: 20.12px;
-                            letter-spacing: 0%;
-                            text-align: left;
-                            vertical-align: bottom;
-                            color: #000000;
-                            margin-bottom: 0;
-                        }
-                    }
-
-                    .b_right {
-                        h1 {
-                            font-family: Poppins;
-                            font-weight: 500;
-                            font-size: 16px;
-                            line-height: 20.12px;
-                            letter-spacing: 0%;
-                            text-align: right;
-                            vertical-align: bottom;
-                            color: #000000;
-                            margin-bottom: 0;
-                        }
-                    }
-
-
-                }
-
-                .billing_items {
-                    list-style-type: none;
-                    padding-left: 0;
-                    margin-bottom: 0;
-                    height: 429px;
-                    overflow-y: auto;
-
-                    li {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
+                    .bill_titel_area {
+                        box-shadow: 0px 2.43px 4.87px -1.22px #0000001C;
+                        background: #FFFFFF;
+                        border-radius: 5px;
                         padding: 12px 30px;
-                        border-bottom: 1px solid #E5E5EA;
 
                         .b_left {
                             display: flex;
@@ -263,240 +208,371 @@ body {
                             align-items: center;
                             column-gap: 60px;
 
-
-                            h2 {
+                            h1 {
                                 font-family: Poppins;
-                                font-weight: 600;
-                                font-size: 14px;
-                                line-height: 18.88px;
-                                letter-spacing: -1%;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 20.12px;
+                                letter-spacing: 0%;
+                                text-align: left;
+                                vertical-align: bottom;
                                 color: #000000;
                                 margin-bottom: 0;
-                                text-align: left;
                                 min-width: 60px;
                             }
 
-                            h3 {
+                            h2 {
                                 font-family: Poppins;
-                                font-weight: 400;
-                                font-size: 14px;
-                                line-height: 18.88px;
-                                letter-spacing: -1%;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 20.12px;
+                                letter-spacing: 0%;
+                                text-align: left;
+                                vertical-align: bottom;
                                 color: #000000;
                                 margin-bottom: 0;
-                                text-align: left;
                             }
                         }
 
                         .b_right {
-
-
-                            h2 {
+                            h1 {
                                 font-family: Poppins;
-                                font-weight: 600;
-                                font-size: 14px;
-                                line-height: 18.88px;
-                                letter-spacing: -1%;
-                                color: #000000;
-                                margin-bottom: 0;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 20.12px;
+                                letter-spacing: 0%;
                                 text-align: right;
-                            }
-
-                            h3 {
-                                font-family: Inter;
-                                font-weight: 400;
-                                font-size: 12px;
-                                line-height: 18.88px;
-                                letter-spacing: -1%;
-                                text-align: right;
-
+                                vertical-align: bottom;
                                 color: #000000;
                                 margin-bottom: 0;
                             }
                         }
+
+
                     }
-                }
 
-                .bill_total_amount_area {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: 12px 30px;
-                    border-bottom: 1px solid #E5E5EA;
-
-                    ul {
+                    .billing_items {
                         list-style-type: none;
                         padding-left: 0;
                         margin-bottom: 0;
+                        height: 429px;
+                        overflow-y: auto;
 
                         li {
-                            &:first-child {
-                                font-family: Poppins;
-                                font-weight: 600;
-                                font-size: 14px;
-                                line-height: 23.9px;
-                                letter-spacing: -1%;
-                                color: #8E8E93;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 12px 30px;
+                            border-bottom: 1px solid #E5E5EA;
+
+                            .b_left {
+                                display: flex;
+                                justify-content: start;
+                                align-items: center;
+                                column-gap: 60px;
+
+
+                                h2 {
+                                    font-family: Poppins;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                    line-height: 18.88px;
+                                    letter-spacing: -1%;
+                                    color: #000000;
+                                    margin-bottom: 0;
+                                    text-align: left;
+                                    min-width: 60px;
+                                }
+
+                                h3 {
+                                    font-family: Poppins;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 18.88px;
+                                    letter-spacing: -1%;
+                                    color: #000000;
+                                    margin-bottom: 0;
+                                    text-align: left;
+                                }
                             }
 
-                            &:last-child {
-                                font-family: Poppins;
-                                font-weight: 500;
-                                font-size: 20px;
-                                line-height: 23.9px;
-                                letter-spacing: -1%;
-                                color: #000000;
-                            }
-                        }
+                            .b_right {
 
-                        &:last-child {
-                            li {
-                                text-align: right;
+
+                                h2 {
+                                    font-family: Poppins;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                    line-height: 18.88px;
+                                    letter-spacing: -1%;
+                                    color: #000000;
+                                    margin-bottom: 0;
+                                    text-align: right;
+                                }
+
+                                h3 {
+                                    font-family: Inter;
+                                    font-weight: 400;
+                                    font-size: 12px;
+                                    line-height: 18.88px;
+                                    letter-spacing: -1%;
+                                    text-align: right;
+
+                                    color: #000000;
+                                    margin-bottom: 0;
+                                }
                             }
                         }
                     }
-                }
 
-                .bill_save_and_print_area {
-                    padding: 12px 30px;
-
-                    ul {
+                    .bill_total_amount_area {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        padding-left: 0;
-                        margin-bottom: 0;
-                        list-style-type: none;
+                        padding: 12px 30px;
+                        border-bottom: 1px solid #E5E5EA;
 
-                        li {
-                            button {
-                                font-family: Poppins;
-                                font-weight: 400;
-                                font-size: 18px;
-                                line-height: 20.12px;
-                                letter-spacing: 0%;
-                                vertical-align: bottom;
-                                color: #000000;
-                                background: #E5E5EA;
-                                border: 1px solid #E5E5EA;
-                                padding: 7px 10px;
-                                border-radius: 5px;
-                                transition: all 0.3s ease;
+                        ul {
+                            list-style-type: none;
+                            padding-left: 0;
+                            margin-bottom: 0;
 
-                                &:hover {
-                                    border: 1px solid #011C50;
+                            li {
+                                &:first-child {
+                                    font-family: Poppins;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                    line-height: 23.9px;
+                                    letter-spacing: -1%;
+                                    color: #8E8E93;
+                                }
+
+                                &:last-child {
+                                    font-family: Poppins;
+                                    font-weight: 500;
+                                    font-size: 20px;
+                                    line-height: 23.9px;
+                                    letter-spacing: -1%;
+                                    color: #000000;
+                                }
+                            }
+
+                            &:last-child {
+                                li {
+                                    text-align: right;
                                 }
                             }
                         }
                     }
-                }
 
-                .calculator_area {
-                    padding: 12px 30px;
+                    .bill_save_and_print_area {
+                        padding: 12px 30px;
 
-                    .calculatorTable_container {
-                        background: #F4F4F4;
-                        border-radius: 12px;
-                        border: 1px solid #E5E5E5;
-                        overflow: hidden;
+                        ul {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding-left: 0;
+                            margin-bottom: 0;
+                            list-style-type: none;
 
-                        .calculatorTable {
-                            border-collapse: collapse;
-                            width: 100%;
+                            li {
+                                button {
+                                    font-family: Poppins;
+                                    font-weight: 400;
+                                    font-size: 18px;
+                                    line-height: 20.12px;
+                                    letter-spacing: 0%;
+                                    vertical-align: bottom;
+                                    color: #000000;
+                                    background: #E5E5EA;
+                                    border: 1px solid #E5E5EA;
+                                    padding: 7px 10px;
+                                    height: 44px;
+                                    border-radius: 5px;
+                                    transition: all 0.3s ease;
 
-
-                            tbody {
-
-                                tr {
-
-
-                                    &:first-child {
-                                        border-radius: 5px 5px 0 0;
-                                        overflow: hidden;
+                                    &:hover {
+                                        border: 1px solid #011C50;
                                     }
+                                }
+                            }
+                        }
+                    }
 
-                                    td {
-                                        width: 25%;
-                                        border: 0.5px solid #E5E5E5;
+                    .calculator_area {
+                        padding: 12px 30px;
 
-                                        button {
-                                            width: 100%;
-                                            height: 100%;
-                                            font-family: Poppins;
-                                            font-weight: 400;
-                                            font-size: 18px;
-                                            line-height: 20.12px;
-                                            letter-spacing: 0%;
-                                            vertical-align: bottom;
-                                            color: #000000;
-                                            padding: 16px 0;
-                                            border: none;
-                                            background: transparent;
+                        .calculatorTable_container {
+                            background: #F4F4F4;
+                            border-radius: 12px;
+                            border: 1px solid #E5E5E5;
+                            overflow: hidden;
+
+                            .calculatorTable {
+                                border-collapse: collapse;
+                                width: 100%;
+
+
+                                tbody {
+
+                                    tr {
+
+
+                                        &:first-child {
+
+                                            td {
+                                                border-top: none;
+
+                                                &:last-child {
+                                                    border-top-right-radius: 12px !important;
+                                                }
+                                            }
                                         }
 
-                                    }
+                                        &:last-child {
 
-                                    .qty_color {
-                                        background: #DEFDFF;
-                                        border: 1px solid #017E84;
+                                            td {
+                                                border-bottom: none;
+                                            }
+                                        }
 
-                                    }
+                                        td {
+                                            width: 25%;
+                                            border: none;
+                                            padding: 0;
 
-                                    .yellow_color {
-                                        background: #F7E08E;
-                                        border: 1px solid #F8C100;
+                                            &:first-child {
+                                                border-left: none;
+                                            }
 
-                                    }
+                                            &:last-child {
+                                                border-right: none;
+                                            }
 
-                                    .dot_color {
-                                        background: #F5D7CB;
-                                        border: 1px solid #ECB7A0;
+                                            button {
+                                                width: 100%;
+                                                height: 100%;
+                                                font-family: Poppins;
+                                                font-weight: 400;
+                                                font-size: 18px;
+                                                line-height: 20.12px;
+                                                letter-spacing: 0%;
+                                                vertical-align: bottom;
+                                                color: #000000;
+                                                padding: 16px 0;
+                                                border: none;
+                                                background: transparent;
+                                                border: 1px solid #E5E5E5;
+                                                transition: all 0.3s ease;
 
-                                    }
+                                                &:hover {
+                                                    background: #e4e3e3;
+                                                }
+                                            }
 
-                                    .bk_color {
-                                        background: #FAA0A0;
-                                        border: 1px solid #F77070;
+                                            .qty_color {
+                                                background: #DEFDFF;
+                                                border: 1px solid #017E84 !important;
+                                                border-top-right-radius: 12px;
+
+                                                &:hover {
+                                                    background: #017E84 !important;
+                                                }
+
+
+                                            }
+
+                                            .yellow_color {
+                                                background: #F7E08E;
+                                                border: 1px solid #F8C100;
+                                                border-bottom-left-radius: 12px;
+
+                                                &:hover {
+                                                    background: #F8C100 !important;
+                                                }
+
+                                            }
+
+                                            .dot_color {
+                                                background: #F5D7CB;
+                                                border: 1px solid #ECB7A0;
+
+                                                &:hover {
+                                                    background: #ECB7A0 !important;
+                                                }
+
+                                            }
+
+                                            .bk_color {
+                                                background: #FAA0A0;
+                                                border: 1px solid #F77070;
+                                                border-bottom-right-radius: 12px;
+
+                                                &:hover {
+                                                    background: #F77070 !important;
+                                                }
+
+                                                img {
+                                                    width: 22px;
+                                                }
+
+                                            }
+
+                                        }
+
+
 
                                     }
                                 }
                             }
                         }
-                    }
 
-                    .paymentBtn {
-                        font-family: Poppins;
-                        font-weight: 500;
-                        font-size: 20px;
-                        line-height: 20.12px;
-                        letter-spacing: 0%;
-                        vertical-align: bottom;
-                        color: #ffffff;
-                        background: #384785;
-                        padding: 21px;
-                        width: 100%;
-                        border: none;
-                        border-radius: 6px;
-                        margin-top: 17px;
-                        transition: all 0.3s ease;
+                        .paymentBtn {
+                            font-family: Poppins;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 20.12px;
+                            letter-spacing: 0%;
+                            vertical-align: bottom;
+                            color: #ffffff;
+                            background: #384785;
+                            padding: 21px;
+                            width: 100%;
+                            border: none;
+                            border-radius: 6px;
+                            margin-top: 17px;
+                            transition: all 0.3s ease;
 
-                        &:hover {
-                            background: #0f1d55;
+                            &:hover {
+                                background: #0f1d55;
+                            }
                         }
+
                     }
 
                 }
-
             }
         }
+
+
     }
 }
 
+@media (max-width: 1300px) {
+    .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems{
+       width: calc(50% + 100px);
+    }
+    //   .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area{
+    //     width: calc(50% - 100px);
+    // }
+}
 
 @media (max-width: 630px) {
     .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card {
         width: calc((100% - 15px) / 2);
     }
+  
 }
 
 @media (max-width: 440px) {

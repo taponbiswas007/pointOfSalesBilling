@@ -43,6 +43,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
 .point_of_sales_bill_wrapper .billing_body_wrapper .item_list {
   background: #384785;
@@ -81,7 +83,15 @@ body {
   background: #ffffff;
   color: #011C50;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .subitems {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 15px;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -89,10 +99,9 @@ body {
        column-gap: 15px;
   row-gap: 15px;
   flex-wrap: wrap;
-  padding: 0 15px;
-  width: 45%;
+  width: calc(50% - 100px);
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems .items_card {
   box-shadow: 0px 5.24px 18.88px 0px rgba(0, 0, 0, 0.0588235294);
   background: #ffffff;
   border: 2px solid #ffffff;
@@ -100,13 +109,13 @@ body {
   transition: all 0.3s ease;
   width: calc((100% - 30px) / 3);
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card:hover {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems .items_card:hover {
   border: 2px solid #011C50;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card .items_card_description {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems .items_card .items_card_description {
   padding: 16px 12px 17px 12px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card .items_card_description p {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems .items_card .items_card_description p {
   font-family: Inter;
   font-weight: 400;
   font-size: 12.59px;
@@ -116,7 +125,7 @@ body {
   margin-bottom: 0;
   text-align: left;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card .items_card_footer {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems .items_card .items_card_footer {
   padding: 8px 12px;
   border-top: 0.52px solid #E5E5EA;
   font-family: Inter;
@@ -127,21 +136,21 @@ body {
   color: #000000;
   text-align: left;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area {
-  width: 50%;
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area {
+  width: calc(50% + 100px);
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_header {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_header {
   background: #384785;
   padding: 7px 13px 7px 20px;
   border-radius: 3px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_header .barcodeinput_area input {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_header .barcodeinput_area input {
   padding: 5px 7px 5px 30px;
   background: #ffffff;
   border-radius: 7px;
   border: none;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_header .customerbtn {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_header .customerbtn {
   font-family: Rubik;
   font-weight: 400;
   font-size: 16px;
@@ -154,27 +163,27 @@ body {
   border-radius: 5px;
   border: none;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body {
   background: #ffffff;
   box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.0117647059);
   border: 1px solid #FFF4F4;
   border-radius: 4px;
   margin-top: 11px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_titel_area {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_titel_area {
   box-shadow: 0px 2.43px 4.87px -1.22px rgba(0, 0, 0, 0.1098039216);
   background: #FFFFFF;
   border-radius: 5px;
   padding: 12px 30px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_titel_area .b_left {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_titel_area .b_left {
   display: flex;
   justify-content: start;
   align-items: center;
   -moz-column-gap: 60px;
        column-gap: 60px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_titel_area .b_left h1 {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_titel_area .b_left h1 {
   font-family: Poppins;
   font-weight: 500;
   font-size: 16px;
@@ -186,7 +195,7 @@ body {
   margin-bottom: 0;
   min-width: 60px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_titel_area .b_left h2 {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_titel_area .b_left h2 {
   font-family: Poppins;
   font-weight: 500;
   font-size: 16px;
@@ -197,7 +206,7 @@ body {
   color: #000000;
   margin-bottom: 0;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_titel_area .b_right h1 {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_titel_area .b_right h1 {
   font-family: Poppins;
   font-weight: 500;
   font-size: 16px;
@@ -208,28 +217,28 @@ body {
   color: #000000;
   margin-bottom: 0;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .billing_items {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .billing_items {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 0;
   height: 429px;
   overflow-y: auto;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .billing_items li {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .billing_items li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 30px;
   border-bottom: 1px solid #E5E5EA;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .billing_items li .b_left {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .billing_items li .b_left {
   display: flex;
   justify-content: start;
   align-items: center;
   -moz-column-gap: 60px;
        column-gap: 60px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .billing_items li .b_left h2 {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .billing_items li .b_left h2 {
   font-family: Poppins;
   font-weight: 600;
   font-size: 14px;
@@ -240,7 +249,7 @@ body {
   text-align: left;
   min-width: 60px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .billing_items li .b_left h3 {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .billing_items li .b_left h3 {
   font-family: Poppins;
   font-weight: 400;
   font-size: 14px;
@@ -250,7 +259,7 @@ body {
   margin-bottom: 0;
   text-align: left;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .billing_items li .b_right h2 {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .billing_items li .b_right h2 {
   font-family: Poppins;
   font-weight: 600;
   font-size: 14px;
@@ -260,7 +269,7 @@ body {
   margin-bottom: 0;
   text-align: right;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .billing_items li .b_right h3 {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .billing_items li .b_right h3 {
   font-family: Inter;
   font-weight: 400;
   font-size: 12px;
@@ -270,19 +279,19 @@ body {
   color: #000000;
   margin-bottom: 0;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_total_amount_area {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_total_amount_area {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 30px;
   border-bottom: 1px solid #E5E5EA;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_total_amount_area ul {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_total_amount_area ul {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 0;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_total_amount_area ul li:first-child {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_total_amount_area ul li:first-child {
   font-family: Poppins;
   font-weight: 600;
   font-size: 14px;
@@ -290,7 +299,7 @@ body {
   letter-spacing: -1%;
   color: #8E8E93;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_total_amount_area ul li:last-child {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_total_amount_area ul li:last-child {
   font-family: Poppins;
   font-weight: 500;
   font-size: 20px;
@@ -298,13 +307,13 @@ body {
   letter-spacing: -1%;
   color: #000000;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_total_amount_area ul:last-child li {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_total_amount_area ul:last-child li {
   text-align: right;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_save_and_print_area {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_save_and_print_area {
   padding: 12px 30px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_save_and_print_area ul {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_save_and_print_area ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -312,7 +321,7 @@ body {
   margin-bottom: 0;
   list-style-type: none;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_save_and_print_area ul li button {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_save_and_print_area ul li button {
   font-family: Poppins;
   font-weight: 400;
   font-size: 18px;
@@ -323,34 +332,47 @@ body {
   background: #E5E5EA;
   border: 1px solid #E5E5EA;
   padding: 7px 10px;
+  height: 44px;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .bill_save_and_print_area ul li button:hover {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .bill_save_and_print_area ul li button:hover {
   border: 1px solid #011C50;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area {
   padding: 12px 30px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container {
   background: #F4F4F4;
   border-radius: 12px;
   border: 1px solid #E5E5E5;
   overflow: hidden;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable {
   border-collapse: collapse;
   width: 100%;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr:first-child {
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr:first-child td {
+  border-top: none;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr:first-child td:last-child {
+  border-top-right-radius: 12px !important;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr:last-child td {
+  border-bottom: none;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td {
   width: 25%;
-  border: 0.5px solid #E5E5E5;
+  border: none;
+  padding: 0;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td button {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td:first-child {
+  border-left: none;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td:last-child {
+  border-right: none;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td button {
   width: 100%;
   height: 100%;
   font-family: Poppins;
@@ -363,24 +385,47 @@ body {
   padding: 16px 0;
   border: none;
   background: transparent;
+  border: 1px solid #E5E5E5;
+  transition: all 0.3s ease;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr .qty_color {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td button:hover {
+  background: #e4e3e3;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td .qty_color {
   background: #DEFDFF;
-  border: 1px solid #017E84;
+  border: 1px solid #017E84 !important;
+  border-top-right-radius: 12px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr .yellow_color {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td .qty_color:hover {
+  background: #017E84 !important;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td .yellow_color {
   background: #F7E08E;
   border: 1px solid #F8C100;
+  border-bottom-left-radius: 12px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr .dot_color {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td .yellow_color:hover {
+  background: #F8C100 !important;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td .dot_color {
   background: #F5D7CB;
   border: 1px solid #ECB7A0;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr .bk_color {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td .dot_color:hover {
+  background: #ECB7A0 !important;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td .bk_color {
   background: #FAA0A0;
   border: 1px solid #F77070;
+  border-bottom-right-radius: 12px;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .paymentBtn {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td .bk_color:hover {
+  background: #F77070 !important;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .calculatorTable_container .calculatorTable tbody tr td .bk_color img {
+  width: 22px;
+}
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .paymentBtn {
   font-family: Poppins;
   font-weight: 500;
   font-size: 20px;
@@ -396,10 +441,15 @@ body {
   margin-top: 17px;
   transition: all 0.3s ease;
 }
-.point_of_sales_bill_wrapper .billing_body_wrapper .bill_area .bill_body .calculator_area .paymentBtn:hover {
+.point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .bill_area .bill_body .calculator_area .paymentBtn:hover {
   background: #0f1d55;
 }
 
+@media (max-width: 1300px) {
+  .point_of_sales_bill_wrapper .billing_body_wrapper .subitems_and_bill_area .subitems {
+    width: calc(50% + 100px);
+  }
+}
 @media (max-width: 630px) {
   .point_of_sales_bill_wrapper .billing_body_wrapper .subitems .items_card {
     width: calc((100% - 15px) / 2);
